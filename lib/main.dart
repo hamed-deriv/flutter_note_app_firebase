@@ -5,6 +5,8 @@ import 'package:flutter_note_app_firebase/firebase_options.dart';
 import 'package:flutter_note_app_firebase/presentation/pages/home_page.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const App());
